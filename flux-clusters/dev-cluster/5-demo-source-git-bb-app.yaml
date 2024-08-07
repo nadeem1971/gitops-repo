@@ -1,0 +1,16 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: 5-demo
+  namespace: flux-system
+  labels:
+    app:
+      name: bb-app
+      version: 7.5.0
+      env: uat
+spec:
+  interval: 1m0s
+  ref:
+    branch: 5-demo
+  url: https://github.com/nadeem1971/bb-app-source.git
+
